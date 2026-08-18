@@ -18,5 +18,12 @@
     <description>
         Open Liberty application containing the JMX management components.
     </description>
-
+<dependencies>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>6.0.1</version>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
 </project>
