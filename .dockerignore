@@ -1,0 +1,15 @@
+.git
+.gitignore
+.idea
+*.iml
+
+application/src/main/java
+application/src/test
+application/.idea
+
+**/target/*
+!application/target/application.war
+
+docs
+Progress_tab.txt
+instructions.txt
