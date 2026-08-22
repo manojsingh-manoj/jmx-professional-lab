@@ -13,7 +13,7 @@
     </parent>
 
     <artifactId>application</artifactId>
-
+    <packaging>war</packaging>
     <name>JMX Lab Application</name>
     <description>
         Open Liberty application containing the JMX management components.
@@ -25,5 +25,35 @@
         <version>6.0.1</version>
         <scope>test</scope>
     </dependency>
+    <dependency>
+        <groupId>jakarta.servlet</groupId>
+        <artifactId>jakarta.servlet-api</artifactId>
+        <version>6.1.0</version>
+        <scope>provided</scope>
+    </dependency>
 </dependencies>
+    <build>
+        <finalName>application</finalName>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>io.openliberty.tools</groupId>
+                <artifactId>liberty-maven-plugin</artifactId>
+                <version>3.11.5</version>
+              <configuration>
+              </configuration>
+            </plugin>
+
+
+        </plugins>
+    </build>
 </project>

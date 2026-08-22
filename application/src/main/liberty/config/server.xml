@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<server description="JMX Professional Lab Server">
+
+    <featureManager>
+        <feature>servlet-6.1</feature>
+    </featureManager>
+
+    <httpEndpoint
+            id="defaultHttpEndpoint"
+            httpPort="9080"
+            httpsPort="9443" />
+
+    <webApplication
+            id="application"
+            name="application"
+            location="application.war"
+            contextRoot="/jmx-lab" />
+
+</server>
