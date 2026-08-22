@@ -1,0 +1,22 @@
+services:
+
+  liberty:
+    image: jmx-professional-lab:0.1.0
+
+    container_name: jmx-professional-lab
+
+    ports:
+      - "9080:9080"
+
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "curl",
+          "-f",
+          "http://localhost:9080/jmx-lab/api/orders/status"
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
